@@ -1,0 +1,14 @@
+{
+  "name": "lit-html-parcel",
+  "version": "1.0.0",
+  "description": "simple demo lit-html with parcel HMR",
+  "main": "app.js",
+  "repository": "https://github.com/miebach/lit-html-parcel",
+  "author": "kwmiebach",
+  "license": "MIT",
+  "private": true,
+  "privateComment": "private, when set to true, prevents accidental publication",
+  "dependencies": {
+    "lit-html": "^0.10.0"
+  }
+}

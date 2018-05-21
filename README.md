@@ -11,4 +11,10 @@ We use parcel with hot module replacement.
 
 Template rendering with lit-html.
 
+# How to do this manually
 
+1. Install node system wide
+2. Install yarn with node system wide
+3. Go to the empty folder for the new project
+4. Start a new parcel project following the parcel instructions
+5. Add lit-html with yarn to the project
