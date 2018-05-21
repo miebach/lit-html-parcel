@@ -9,7 +9,10 @@ We use parcel with hot module replacement.
 
 ## lit-html
 
-Template rendering with lit-html.
+Template rendering with lit-html. 
+
+When a template is repeatedly rendered, only the changed content in the
+dom is replaced. See https://github.com/miebach/lit-html-parcel/blob/master/doc/demo.mp4
 
 # How to do this manually
 
