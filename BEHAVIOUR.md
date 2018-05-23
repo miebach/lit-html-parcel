@@ -1,5 +1,15 @@
 # Behaviour
 
+Jasmine and Puppeteer are used for behavior-driven development. They are included in the local packages, see package.json and yarn.lock
+
 ## Jasmine
 
-Jasmine is used for behavior-driven development. It is included in the local packages, see package.json and yarn.lock
+Installation with yarn:
+
+`yarn add jasmine`
+
+## Puppeteer
+
+Installation with yarn:
+
+`yarn add puppeteer`

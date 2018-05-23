@@ -84,9 +84,9 @@ https://parceljs.org/
 
 The package `parcel-bundle` should not be added locally into the project as a dev dependency, otherwise there were problems and HMR did not work with the current dependencies.
 
-## Behaviour with Jasmine
+## Behaviour driven development and end-to-end testing
 
-see BEHAVIOUR.md
+With jasmine and puppeteer, see BEHAVIOUR.md
 
 ## Templates with `lit-html`
 
