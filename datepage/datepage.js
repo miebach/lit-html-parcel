@@ -1,12 +1,10 @@
 
-//import hyperHTML from 'hyperhtml';
-import hyperHTML from 'hyperhtml/esm';
+import hyperHTML from 'hyperhtml'; // ES6 WORKS!
 
-// this is hyperHTML
 function timeTpl(render) {
   render`
     <div>
-      <h1>The time 4</h1>
+      <h1>The time</h1>
       <h2>It is ${new Date().toLocaleTimeString()}.</h2>
     </div>
   `;
@@ -20,7 +18,6 @@ function attachTimeTplTo(elementId) {
   attachTo(timeTpl,elementId);
 }
 
-
 module.exports = {
   attachTimeTplTo: attachTimeTplTo
-}
+};

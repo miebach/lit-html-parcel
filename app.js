@@ -2,10 +2,14 @@ console.log("hello world");
 
 import MM from './datepage/datepage';
 
+const attachTimeTplTo = MM.attachTimeTplTo;
 
+function loopIt() {
+  attachTimeTplTo('root');
+  setTimeout(loopIt,1000);
+}
 
-MM.attachTimeTplTo('root');
-
+loopIt();
 
 function emptyTpl(render) {
   render`
