@@ -43,6 +43,14 @@ To start a local dev server with HMR:
 
     parcel index.html
 
+## Yarn 
+
+Uses a lockfile yarn.lock for better version control. 
+There are 2 additional steps to make the lockfile work with git
+
+1) Tell git to treat the lockfile as textfile and merge it
+
+The file ./.gitattributes contains the line `yarn.lock -text`
 
 ## `Parcel` with HMR
 
