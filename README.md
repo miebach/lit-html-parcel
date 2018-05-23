@@ -52,6 +52,32 @@ There are 2 additional steps to make the lockfile work with git
 
 The file ./.gitattributes contains the line `yarn.lock -text`
 
+2) Verify all merges of the lockfile manually
+
+https://stackoverflow.com/a/5091756/362951
+
+a) Tell git there is a custom merge driver. Append this to the repo's config file (.git/config).
+*This step needs to be done once manually in each checked out location for now!*:
+
+```
+[merge "verify"]
+        name = merge and verify driver
+        driver = ./bin/git-merge-and-verify %A %O %B
+```
+
+Steps b) and c) are in the repository:
+
+b) Added the executable file `bin/git-merge-and-verify.sh`:
+
+```
+#!/bin/bash
+git merge-file "${1}" "${2}" "${3}"
+exit 1
+```
+c) Told git to verify the merges of the lockfile by adding the line `yarn.lock merge=verify` to `./.gitattributes`. 
+
+The result is that git will merge the lockfile normally, but as the script always returns non-zero git will afterwards indicate that there was a conflict, even if the merge was actually resolved without conflicts. The reason is that git sometimes could introduce errors when merging the lockfile, see https://github.com/yarnpkg/yarn/issues/1776#issuecomment-280437649
+
 ## `Parcel` with HMR
 
 https://parceljs.org/
