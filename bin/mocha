@@ -1,0 +1,3 @@
+#/bin/bash
+# pass all commandline arguments but add the location of the mocha config file as option:
+./node_modules/.bin/mocha --opts ./mocha.opts "$@"

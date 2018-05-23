@@ -3,3 +3,9 @@ export PATH=$HOME/.config/yarn/global/node_modules/.bin:.node_modules.bin:$PATH
 
 # but the node modules of this project go first:
 export PATH=./node_modules/.bin:$PATH
+
+# and our private bin should go before this:
+# (useful for mocha)
+export PATH=./bin:$PATH
+
+
