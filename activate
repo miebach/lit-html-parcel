@@ -3,3 +3,10 @@ export PATH=$HOME/.config/yarn/global/node_modules/.bin:.node_modules.bin:$PATH
 
 # but the node modules of this project go first:
 export PATH=./node_modules/.bin:$PATH
+
+# Jasmine
+
+export JASMINE_CONFIG_PATH=./jasmine/jasmine.json
+
+
+
