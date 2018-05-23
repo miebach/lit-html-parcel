@@ -84,6 +84,9 @@ https://parceljs.org/
 
 The package `parcel-bundle` should not be added locally into the project as a dev dependency, otherwise there were problems and HMR did not work with the current dependencies.
 
+## Behaviour with Jasmine
+
+see BEHAVIOUR.md
 
 ## Templates with `lit-html`
 
@@ -101,3 +104,8 @@ Good introduction: https://alligator.io/web-components/lit-html/
 3. Go to the empty folder for the new project
 4. Start a new parcel project following the parcel instructions (uses yarn) https://parceljs.org/getting_started.html
 5. Add lit-html with yarn to the project
+6. Add jasmine to the project
+   
+   https://jasmine.github.io/setup/nodejs.html
+
+   yarn add jasmine

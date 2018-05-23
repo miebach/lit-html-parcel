@@ -9,6 +9,7 @@
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
   "dependencies": {
+    "jasmine": "^3.1.0",
     "lit-html": "^0.10.0"
   }
 }
