@@ -85,9 +85,15 @@ https://parceljs.org/
 The package `parcel-bundle` should not be added locally into the project as a dev dependency, otherwise there were problems and HMR did not work with the current dependencies.
 
 
+## Templates with `hyperHTML`
+
+https://github.com/
+
+
 ## How to build this project from scratch
 
 1. Install node system wide
 2. Install yarn with node system wide 
 3. Go to the empty folder for the new project
 4. Start a new parcel project following the parcel instructions (uses yarn) https://parceljs.org/getting_started.html
+5. Add hyperHTML with yarn to the project

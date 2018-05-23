@@ -8,5 +8,7 @@
   "license": "MIT",
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
-  "dependencies": {}
+  "dependencies": {
+    "hyperhtml": "^2.10.1"
+  }
 }

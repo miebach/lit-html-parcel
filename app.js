@@ -1,26 +1,37 @@
 console.log("hello world");
 
+//import hyperHTML from 'hyperhtml';
+import hyperHTML from 'hyperhtml/esm';
 
-import {html, render} from 'lit-html';
-
-// This is a lit-html template function. It returns a lit-html template.
-const helloTemplate = (name) => html`<div>Hello ${name}!</div>`;
-
-// Call the function with some data, and pass the result to render()
-
-
-function state1 () {
-  // This renders <div>Hello Steve!</div> to the document body
-  render(helloTemplate('Steve'), document.body);
-  setTimeout(state2, 1000); 
+// this is hyperHTML
+function timeTpl(render) {
+  render`
+    <div>
+      <h1>The time 4</h1>
+      <h2>It is ${new Date().toLocaleTimeString()}.</h2>
+    </div>
+  `;
 }
 
-function state2 () {
-  // This updates to <div>Hello Kevin!</div>, but only updates the ${name} part
-  render(helloTemplate('Kevin'), document.body);
-  setTimeout(state1, 1000); 
+setInterval(timeTpl, 1000, hyperHTML(document.getElementById('root')));
+
+
+function emptyTpl(render) {
+  render`
+    <div>
+    </div>
+  `;
 }
 
-state1();
+if (module.hot) {
+  /*
+  module.hot.dispose(function () {
+    // module is about to be replaced
+    //clearinterval(intervalId); // https://stackoverflow.com/a/1795107/362951
+  });
 
-
+  module.hot.accept(function () {
+    // module or one of its dependencies was just updated
+  });
+  */
+}
