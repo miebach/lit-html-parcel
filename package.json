@@ -10,6 +10,7 @@
   "privateComment": "private, when set to true, prevents accidental publication",
   "dependencies": {
     "lit-html": "^0.10.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "puppeteer": "^1.5.0"
   }
 }

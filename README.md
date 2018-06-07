@@ -78,12 +78,15 @@ c) Told git to verify the merges of the lockfile by adding the line `yarn.lock m
 
 The result is that git will merge the lockfile normally, but as the script always returns non-zero git will afterwards indicate that there was a conflict, even if the merge was actually resolved without conflicts. The reason is that git sometimes could introduce errors when merging the lockfile, see https://github.com/yarnpkg/yarn/issues/1776#issuecomment-280437649
 
+## Behaviour driven development and end-to-end testing
+
+With mocha and puppeteer, see BEHAVIOUR.md
+
 ## `Parcel` with HMR
 
 https://parceljs.org/
 
 The package `parcel-bundle` should not be added locally into the project as a dev dependency, otherwise there were problems and HMR did not work with the current dependencies.
-
 
 ## Templates with `lit-html`
 
