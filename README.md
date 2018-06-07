@@ -16,7 +16,6 @@ This is a simple but powerful starter kit for a javascript web project.
 
 ```
 sudo npm install -g yarn
-yarn install
 ```
 
 3) Install parcel globally
@@ -24,6 +23,11 @@ yarn install
 Do not install it into the project.
 
 https://parceljs.org/getting_started.html
+
+```
+sudo yarn global add parcel-bundler
+```
+
 
 4) Checkout this project
 
