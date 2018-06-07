@@ -1,3 +1,7 @@
+# Run Mocha:
+# bin/runmocha
+# see ^ ^ ^ for more info!
+
 # See https://mochajs.org/#mochaopts for this file
 
 # All optins see https://mochajs.org/#usage
