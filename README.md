@@ -31,7 +31,7 @@ https://parceljs.org/getting_started.html
 
 5) Tell git there is a custom merge driver
 
-See below [Yarn 2a](#Yarn)
+See below [yarn 2a](#Yarn)
 
 6) Install npm packages 
 
