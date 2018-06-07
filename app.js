@@ -1,24 +1,24 @@
-console.log("hello world");
+import hyperHTML from 'hyperhtml'; // ES6 WORKS!
 
-import MM from './datepage/datepage';
+console.log("mark1");
 
-const attachTimeTplTo = MM.attachTimeTplTo;
-
-function loopIt() {
-  attachTimeTplTo('root');
-  setTimeout(loopIt,1000);
+function click1(e) {
+  e.preventDefault();
+  console.log('click event');
 }
 
-loopIt();
-
-function emptyTpl(render) {
-  render`
-    <div>
-    </div>
-  `;
+function stopT(render) {
+  render`<div><button onclick=${click1}>stop</button></div>`;
 }
 
-/*
+
+const stopId = 'main';
+const render = hyperHTML(document.getElementById(stopId))
+stopT(render);
+
+console.log("mark10");
+
+
 if (module.hot) {
   module.hot.dispose(function () {
     // module is about to be replaced
@@ -29,4 +29,4 @@ if (module.hot) {
     // module or one of its dependencies was just updated
   });
 }
-*/
+

@@ -9,6 +9,6 @@
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
   "dependencies": {
-    "hyperhtml": "^2.10.1"
+    "hyperhtml": "^2.10.8"
   }
 }
