@@ -29,7 +29,11 @@ https://parceljs.org/getting_started.html
 
 ... and cd into its root directory.
 
-5) Install npm packages 
+5) Tell git there is a custom merge driver
+
+See below [Yarn 2a](#Yarn)
+
+6) Install npm packages 
 
 ```
 yarn install
@@ -37,13 +41,13 @@ yarn install
 
 Yarn cli: https://yarnpkg.com/lang/en/docs/cli/install/
 
-6) Start developing
+7) Start developing
 
 To start a local dev server with HMR: 
 
     parcel index.html
 
-## Yarn 
+## Yarn
 
 Uses a lockfile yarn.lock for better version control. 
 There are 2 additional steps to make the lockfile work with git
