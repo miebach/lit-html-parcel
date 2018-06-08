@@ -8,6 +8,11 @@
   "license": "MIT",
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
+  "scripts" : {
+    "dev" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test" : "bin/runmocha"
+  },
   "dependencies": {
     "lit-html": "^0.10.0",
     "mocha": "^5.2.0",
