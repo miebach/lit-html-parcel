@@ -8,12 +8,14 @@
   "license": "MIT",
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
-  "scripts" : {
-    "dev" : "parcel index.html",
-    "build" : "parcel build index.html",
-    "test" : "bin/runmocha"
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "http-server-dist" : "http-server ./dist -p 8234 -c-1",
+    "test": "bin/runmocha"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "lit-html": "^0.10.0",
     "mocha": "^5.2.0",
     "puppeteer": "^1.5.0"
