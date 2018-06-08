@@ -9,12 +9,13 @@
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
   "config": {
-    "http_server_dist_port" : "8123"
+    "http_server_dist_port": "8123"
   },
   "scripts": {
     "dev": "parcel index.html",
     "dist-clean": "rm ./dist -r | exit 0",
     "build": "yarn run dist-clean && parcel build index.html",
+    "build-run-mocha": "yarn run build && bin/runmocha",
     "run-mocha": "bin/runmocha",
     "http-server-dist": "http-server ./dist -p $npm_package_config_http_server_dist_port -c-1",
     "start-server-and-test": "start-server-and-test http-server-dist http://0.0.0.0:$npm_package_config_http_server_dist_port run-mocha",
@@ -32,6 +33,7 @@
     "lit-html": "^0.10.0",
     "mocha": "^5.2.0",
     "puppeteer": "^1.5.0",
+    "routerjs": "^1.0.10",
     "start-server-and-test": "^1.4.1"
   }
 }
