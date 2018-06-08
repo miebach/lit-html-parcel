@@ -8,16 +8,30 @@
   "license": "MIT",
   "private": true,
   "privateComment": "private, when set to true, prevents accidental publication",
+  "config": {
+    "http_server_dist_port" : "8123"
+  },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html",
-    "http-server-dist" : "http-server ./dist -p 8234 -c-1",
-    "test": "bin/runmocha"
+    "dist-clean": "rm ./dist -r | exit 0",
+    "build": "yarn run dist-clean && parcel build index.html",
+    "run-mocha": "bin/runmocha",
+    "http-server-dist": "http-server ./dist -p $npm_package_config_http_server_dist_port -c-1",
+    "start-server-and-test": "start-server-and-test http-server-dist http://0.0.0.0:$npm_package_config_http_server_dist_port run-mocha",
+    "e2e": "yarn run build && yarn run start-server-and-test"
+  },
+  "scriptsComment": {
+    "run-mocha": "Only used by e2e, needs http-server-dist.",
+    "e2e": [
+      "The parameter http://host:port is necessary for start-server-and-test and passed to http-server-dist but most probably not used.",
+      "The last parameter run-mocha runs the run-mocha script, no 'yarn run ...' necessary'"
+    ]
   },
   "dependencies": {
     "http-server": "^0.11.1",
     "lit-html": "^0.10.0",
     "mocha": "^5.2.0",
-    "puppeteer": "^1.5.0"
+    "puppeteer": "^1.5.0",
+    "start-server-and-test": "^1.4.1"
   }
 }
