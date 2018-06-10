@@ -1,0 +1,39 @@
+# Run Mocha:
+# bin/runmocha
+# see ^ ^ ^ for more info!
+
+# See https://mochajs.org/#mochaopts for this file
+
+# All optins see https://mochajs.org/#usage
+
+# Any line except blank or comment will be treated as
+# a command-line argument (along with any associated option value)
+# to be used as a default setting. Settings should be specified one per line.
+
+# The lines in this file are prepended to any actual command-line arguments.
+# As such, actual command-line arguments will take
+# precedence over the defaults.
+
+# To specify the directory and filename or filename pattern it is
+# better to do this in a script e.g. (./mocharun) that calls mocha repeatedly,
+# with each directory and filename pattern on a single line
+
+# --require should      use bdd as the interface
+# -u, --ui <name>       specify user-interface bdd|tdd|qunit|exports
+# --ui bdd              require the should library
+# 
+# --reporter dot        default the reporter to dot
+# --reporter list       changing the reporter to list:
+# 
+# --growl               enabling Growl support
+# --recursive           recurse the test directories subdirectories
+#  
+# -b, --bail                              bail after first test failure
+# -g, --grep <pattern>                    only run tests matching <pattern>
+# -f, --fgrep <string>                    only run tests containing <string>
+# -r, --require <name>                    require the given module
+# -s, --slow <ms>                         "slow" test threshold in milliseconds [75]
+# -w, --watch                             watch files for changes
+# 
+# --full-trace                            display the full stack trace
+# --inline-diffs                          display actual/expected differences inline within each string

@@ -1,0 +1,3 @@
+mocha ./menu/menuSpec.js
+mocha ./puppeteer/puppeteerSpec.js
+mocha ./router/routerSpec.js
