@@ -34,18 +34,24 @@ const http_port = process.env.npm_package_config_http_server_dist_port;
 
 describe('router demo',function(){
 
-  it('should find header 2', async () => {
+  it('should click menu page 2', async () => {
     const [browser,page] = await getBrowserPage(http_port);
-    //await page.screenshot({path: 'index.png'});
+    // await page.screenshot({path: 'index.png'});
 
+    // make sure we are on index page
     assert('This is the index page!' === await
       innerBy(page,'name','h2-header'));
 
+    // first we need to click the Pages menu header:
+    await clickBy(page,'id','linkPages');
+
+    // now we can see the page1-3 menus. Click page2:
     await clickBy(page,'id','link2');
 
+    // make sure we are on page2
     assert('This is the second page!' === await
       innerBy(page, 'name','h2-header'));
+
     await browser.close();
   });
-
 })

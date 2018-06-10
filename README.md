@@ -105,6 +105,12 @@ dom is replaced. Quick demo video: https://github.com/miebach/lit-html-parcel/bl
 
 Good introduction: https://alligator.io/web-components/lit-html/
 
+## CSS with Pure.css
+
+Find the modules in node_modules/purecss/build/ and add the ones you need to index.html:
+
+https://purecss.io/customize/#individual-modules
+
 ## How to build this project from scratch
 
 1. Install node system wide
